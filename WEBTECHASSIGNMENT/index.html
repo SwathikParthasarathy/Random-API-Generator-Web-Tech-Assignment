@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Random User Api</title>
+</head>
+<body>
+
+	<!--Greeting for the visitor User-->
+    <div class="name-container">
+        <div class="visitorImg">
+        </div>
+        <h1></h1>
+    </div>
+
+	<!--Search Bar to enter the numbers of cards wanted-->
+    <div class="search">
+        <input type="text" name="number" placeholder="Enter Number of Search" class="searchBar" autocomplete="off">
+        <input type="button" value="Search" class="searchButton">
+    </div>
+	
+	<!--Buttons to Sort according to users choice-->
+	<div class="short-btns">
+		<div class="btnCont">
+			<input type="button" value="Short By Name A to Z" class="searchButton shBtn">
+			<input type="button" value="Short By Name Z to A" class="searchButton shZBtn">
+		</div>
+		<div class="btnCont">
+			<input type="button" value="Short By Mail A to Z" class="searchButton mailshBtn">
+			<input type="button" value="Short By Mail Z to A" class="searchButton mailshZBtn">
+		</div>
+		<div class="btnCont">
+			<input type="button" value="Short By Age Ascending" class="searchButton ageABtn">
+			<input type="button" value="Short By Age Descending" class="searchButton ageDBtn">
+		</div>
+	</div>
+	
+	<!-- Cards container which will contain the data of users--> 
+    <div class="cards" data-card-container>
+        
+    </div>
+	
+	<template data-card-template>
+        <div class="card">
+            <div class="cardImg">
+                <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="" data-img>
+            </div>
+            <div class="cardContent">
+                <h1 data-name></h1>
+                <p data-location></p>
+                <p data-mail class="cardMail"></p>
+                <p data-age></p>
+            </div>
+        </div>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
